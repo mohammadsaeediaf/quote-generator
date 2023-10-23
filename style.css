@@ -12,7 +12,7 @@ body {
 }
 
 .quotes {
-  width: 75%;
+  /* width: 75%; */
   text-align: center;
   background-color: rgb(253, 222, 184);
   border-radius: 10px;

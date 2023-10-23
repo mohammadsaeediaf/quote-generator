@@ -7,5 +7,11 @@ function addquotes() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {});
+    .then(function (data) {
+      console.log(data[Math.floor(Math.random(0) * 6)].text);
+      console.log();
+      const text = document.querySelector(".quote");
+     
+    });
+
 }

@@ -13,7 +13,9 @@ function addquotes() {
       const text = document.querySelector(".quote");
       text.innerHTML = data[Math.floor(Math.random(0) * 6)].text;
       const author = document.querySelector(".author");
-      
+      author.innerHTML = data[Math.floor(Math.random(0) * 6)].author.replace(
+        ", type.fit",
+        " "
+      );
     });
-
 }

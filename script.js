@@ -3,6 +3,7 @@ const button = document.querySelector(".generate-btn");
 button.addEventListener("click", addquotes);
 soundBtn.addEventListener("click", sound);
 copyBtn.addEventListener("click", copy);
+twitterBtn.addEventListener("click", twitte);
 
 function addquotes() {
   btn.innerHTML = "Loading Quote...";
@@ -28,4 +29,9 @@ function sound() {
 
 function copy() {
   navigator.clipboard.writeText(quoteText.innerHTML);
+}
+
+function twitte() {
+  let tweetUrl = `https://twitter.com/intent/tweet?url=${quoteText.innerHTML}`;
+  window.open(tweetUrl, "_blank");
 }

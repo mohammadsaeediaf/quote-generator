@@ -12,7 +12,6 @@ body {
 }
 
 .quotes {
-  /* width: 75%; */
   text-align: center;
   background-color: rgb(253, 222, 184);
   border-radius: 10px;
@@ -21,24 +20,72 @@ body {
   margin: 0 auto;
 }
 
+.quotes-content {
+  margin: 30px auto 10px auto;
+}
 
+.quote {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 20px;
+}
 
-p {
-  font-weight: bold;
+.author-div {
+  margin: 0 auto;
+}
+
+.author {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+  margin-top: 20px;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.author::before {
+  content: "___";
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 30px;
+  color: #474747;
 }
 
 .generate {
   text-align: center;
-  margin-top: 100px;
 }
 
 .generate-btn {
   border: none;
   outline: none;
   background-color: #d5f365;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 10px;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #474747;
 }
 .generate-btn:hover {
   box-shadow: 7px 5px 56px -14px #c3d900;
+}
+
+.quotes-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.links i {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.links i:hover {
+  color: #fff;
+  background: #333;
 }

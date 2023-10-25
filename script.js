@@ -2,6 +2,7 @@ const button = document.querySelector(".generate-btn");
 
 button.addEventListener("click", addquotes);
 soundBtn.addEventListener("click", sound);
+copyBtn.addEventListener("click", copy);
 
 function addquotes() {
   btn.innerHTML = "Loading Quote...";
@@ -23,4 +24,8 @@ function sound() {
     `${quoteText.innerHTML} by ${author.innerHTML}`
   );
   speechSynthesis.speak(soundOn);
+}
+
+function copy() {
+  navigator.clipboard.writeText(quoteText.innerHTML);
 }

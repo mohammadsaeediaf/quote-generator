@@ -1,9 +1,18 @@
-const button = document.querySelector(".generate-btn");
+const quoteBtn = document.querySelector(".generate-btn");
+const soundBtn = document.querySelector(".fa-volume-up");
+const copyBtn = document.querySelector(".fa-copy");
+const twitterBtn = document.querySelector(".fa-twitter");
+const btn = document.querySelector(".generate-btn");
+const quoteText = document.querySelector(".quote");
+const author = document.querySelector(".author");
 
-button.addEventListener("click", addquotes);
+//// add eventListener
+quoteBtn.addEventListener("click", addquotes);
 soundBtn.addEventListener("click", sound);
 copyBtn.addEventListener("click", copy);
 twitterBtn.addEventListener("click", twitte);
+
+/////// functions
 
 function addquotes() {
   btn.innerHTML = "Loading Quote...";
@@ -20,11 +29,13 @@ function addquotes() {
       btn.innerHTML = "New Quote";
     });
 }
+let soundOn = new SpeechSynthesisUtterance();
+
 function sound() {
-  let soundOn = new SpeechSynthesisUtterance(
-    `${quoteText.innerHTML} by ${author.innerHTML}`
-  );
+  soundOn.voice = window.speechSynthesis.getVoices()[4];
+  soundOn.text = `${quoteText.innerHTML} by ${author.innerHTML}`;
   speechSynthesis.speak(soundOn);
+  console.log(window.speechSynthesis.getVoices());
 }
 
 function copy() {

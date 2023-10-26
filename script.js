@@ -29,11 +29,11 @@ function addquotes() {
       btn.innerHTML = "New Quote";
     });
 }
-let soundOn = new SpeechSynthesisUtterance();
 
 function sound() {
-  soundOn.voice = window.speechSynthesis.getVoices()[4];
+  let soundOn = new SpeechSynthesisUtterance();
   soundOn.text = `${quoteText.innerHTML} by ${author.innerHTML}`;
+  soundOn.voice = speechSynthesis.getVoices()[4];
   speechSynthesis.speak(soundOn);
   console.log(window.speechSynthesis.getVoices());
 }

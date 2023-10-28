@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+}
+
 .quotes-content {
   margin: 30px auto 10px auto;
 }
@@ -76,16 +80,17 @@ body {
   margin: 0 auto;
 }
 
-.links i {
+.links svg {
   border: 1px solid;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
   outline: none;
+
 }
 
-.links i:hover {
+.links svg:hover {
   color: #fff;
-  background: #333;
+  background: #fff;
 }

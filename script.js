@@ -8,7 +8,6 @@ const author = document.querySelector(".author");
 
 //// add eventListener
 quoteBtn.addEventListener("click", addquotes);
-soundBtn.addEventListener("click", sound);
 copyBtn.addEventListener("click", copy);
 twitterBtn.addEventListener("click", twitte);
 
@@ -32,11 +31,13 @@ function addquotes() {
 
 function sound() {
   let soundOn = new SpeechSynthesisUtterance();
-  soundOn.text = `${quoteText.innerHTML} by ${author.innerHTML}`;
   soundOn.voice = speechSynthesis.getVoices()[4];
+  soundOn.text = `${quoteText.innerHTML} by ${author.innerHTML}`;
+  soundOn.volume = 0.5;
   speechSynthesis.speak(soundOn);
-  console.log(window.speechSynthesis.getVoices());
+  console.log(soundOn);
 }
+soundBtn.addEventListener("click", sound);
 
 function copy() {
   navigator.clipboard.writeText(quoteText.innerHTML);

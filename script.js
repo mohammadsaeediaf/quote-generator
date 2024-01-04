@@ -22,7 +22,8 @@ function addquotes() {
     .then(function (data) {
       let counter = Math.floor(Math.random(1) * 16);
       const text = data[counter].text;
-      const author = data[counter].author;
+      const authorName = data[counter].author;
+      const author = authorName.replace(", type.fit", " ");
       document.querySelector(".quote").innerHTML = text;
       document.querySelector(".author").innerHTML = author;
       btn.innerHTML = "New Quote";

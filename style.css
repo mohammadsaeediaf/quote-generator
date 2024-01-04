@@ -80,17 +80,16 @@ body {
   margin: 0 auto;
 }
 
-.links svg {
+.links i {
   border: 1px solid;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
   outline: none;
-
+  margin: 0 3px;
 }
 
-.links svg:hover {
-  color: #fff;
-  background: #fff;
+.links i:hover {
+  scale: 1.1;
 }
